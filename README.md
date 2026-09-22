@@ -1,6 +1,6 @@
 # FortiGate Firewall — Network Segmentation & Security Policy Implementation
 
-**2-week hands-on security project** — configured and tested a segmented enterprise-style network in a FortiGate lab, implementing least-privilege firewall policies, VPN access, and layered security controls (AV, IPS, Web/DNS/Application Filtering).
+**Team project (OAK Academy)** — configured and tested a segmented enterprise-style network in a FortiGate lab, implementing least-privilege firewall policies, VPN access, and layered security controls (AV, IPS, Web/DNS/Application Filtering).
 
 `Firewall Configuration` `FortiGate` `Network Segmentation` `VPN (FortiClient)` `Least Privilege` `Virtual IP / Port Forwarding` `Web Filtering` `DNS Filtering` `IPS` `Antivirus` `Application Control` `Log Analysis`
 
@@ -42,6 +42,48 @@ All traffic between segments routed and controlled through the firewall — no d
 - Layered security controls (AV, IPS, Web/DNS/Application Filtering) addressed different types of traffic and security risks.
 - Firewall policies needed to reflect the different access requirements of each network segment.
 - Reviewing firewall and server logs helped validate policy behavior and troubleshoot connectivity.
+
+## Evidence (Screenshots)
+
+### Least-Privilege OS Access
+
+![SSH connection from LAN1 to LAN2 Linux host](firewall-screenshots/01-ssh-lan1-to-lan2-linux.png)
+
+![Firewall log confirming RDP-only access between Windows hosts](firewall-screenshots/02-rdp-log-verification.png)
+
+![Full firewall policy overview showing named least-privilege rules](firewall-screenshots/03-firewall-policy-overview.png)
+
+### Internal Web Server & Logging
+
+![Web server traffic detected and logged by the firewall](firewall-screenshots/04-juiceshop-webserver-log.png)
+
+![Web server access logged on the Linux host itself](firewall-screenshots/05-webserver-terminal-log.png)
+
+### Internet Access Control
+
+![LAN2 general internet access, unrestricted](firewall-screenshots/06-unrestricted-internet-access.png)
+
+![LAN1 policy blocking example.com while other sites remain accessible](firewall-screenshots/07-block-example-com.png)
+
+![LAN2 policy blocking AWS destinations](firewall-screenshots/08-block-aws.png)
+
+### Application & Web Filtering
+
+![Application Control blocking Instagram (and Facebook/Gmail) for LAN2 Windows devices](firewall-screenshots/09-application-control-instagram-blocked.png)
+
+![Web Filtering blocking a Gambling-category site](firewall-screenshots/10-web-filter-gambling-blocked.png)
+
+### Antivirus & IPS
+
+![FortiGate blocking the EICAR test file download](firewall-screenshots/11-eicar-antivirus-blocked.png)
+
+![Antivirus policy log confirming the eicar.org block](firewall-screenshots/12-antivirus-policy-log.png)
+
+![IPS policy blocking malicious traffic between subnets](firewall-screenshots/13-ips-block-log.png)
+
+### DNS Filtering
+
+![DNS Filter redirect action confirmed in logs](firewall-screenshots/14-dns-filter-redirect.png)
 
 ---
 
