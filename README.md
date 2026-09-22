@@ -45,41 +45,23 @@ All traffic between segments routed and controlled through the firewall — no d
 
 ## Evidence (Screenshots)
 
+A small, representative set of screenshots is included below — enough to show each control actually working, without publishing the full internal policy table or log set.
+
 ### Least-Privilege OS Access
 
 ![SSH connection from LAN1 to LAN2 Linux host](firewall-screenshots/01-ssh-lan1-to-lan2-linux.png)
 
-![Firewall log confirming RDP-only access between Windows hosts](firewall-screenshots/02-rdp-log-verification.png)
-
 ![Full firewall policy overview showing named least-privilege rules](firewall-screenshots/03-firewall-policy-overview.png)
 
-### Internal Web Server & Logging
-
-![Web server traffic detected and logged by the firewall](firewall-screenshots/04-juiceshop-webserver-log.png)
-
-![Web server access logged on the Linux host itself](firewall-screenshots/05-webserver-terminal-log.png)
-
-### Internet Access Control
-
-![LAN2 general internet access, unrestricted](firewall-screenshots/06-unrestricted-internet-access.png)
+### Internet & Web Access Control
 
 ![LAN1 policy blocking example.com while other sites remain accessible](firewall-screenshots/07-block-example-com.png)
 
-![LAN2 policy blocking AWS destinations](firewall-screenshots/08-block-aws.png)
-
-### Application & Web Filtering
-
-![Application Control blocking Instagram (and Facebook/Gmail) for LAN2 Windows devices](firewall-screenshots/09-application-control-instagram-blocked.png)
-
 ![Web Filtering blocking a Gambling-category site](firewall-screenshots/10-web-filter-gambling-blocked.png)
 
-### Antivirus & IPS
+### Antivirus
 
 ![FortiGate blocking the EICAR test file download](firewall-screenshots/11-eicar-antivirus-blocked.png)
-
-![Antivirus policy log confirming the eicar.org block](firewall-screenshots/12-antivirus-policy-log.png)
-
-![IPS policy blocking malicious traffic between subnets](firewall-screenshots/13-ips-block-log.png)
 
 ### DNS Filtering
 
